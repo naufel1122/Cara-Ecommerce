@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
         navbar.classList.toggle('active');
     });
 
-    closeBtn.addEventListener('click', () => {
+    closeBtn.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default anchor behavior
         navbar.classList.remove('active');
     });
 
