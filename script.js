@@ -1,15 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('bar');
     const navbar = document.getElementById('navbar');
-    
+    const closeBtn = document.getElementById('close');
+
     menuToggle.addEventListener('click', () => {
-        if (navbar.classList.contains('active')) {
-            navbar.classList.remove('active'); // Close the navbar
-        } else {
-            navbar.classList.add('active'); // Open the navbar
-        }
+        navbar.classList.toggle('active');
     });
-    
+
+    closeBtn.addEventListener('click', () => {
+        navbar.classList.remove('active');
+    });
+
     // Optional: Close the navbar when clicking outside of it
     document.addEventListener('click', (event) => {
         if (!navbar.contains(event.target) && event.target !== menuToggle) {

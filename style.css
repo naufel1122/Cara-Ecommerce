@@ -126,12 +126,12 @@ body {
 #mobile {
     display: none;
     align-items: center;
-    
 }
 
-#mobile a{
+#mobile a {
     color: #000;
 }
+
 #mobile i {
     font-size: 24px;
     cursor: pointer;
@@ -169,8 +169,28 @@ body {
 
     #mobile {
         display: flex;
+        align-items: center;
+    }
+
+    #mobile i {
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    #close {
+        position: absolute;
+        top: 0px; /* Adjusted position */
+        left: 0px; /* Adjusted position */
+        cursor: pointer;
+        display: none;
+    }
+
+    #navbar.active #close {
+        display: block;
     }
 }
+
 
 /* Home Page */
 #hero {
