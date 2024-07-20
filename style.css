@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'spartan', sans-serif;
+    font-family: 'League Spartan', sans-serif; /* Corrected font-family */
 }
 
 h1 {
@@ -30,7 +30,7 @@ h6 {
 }
 
 p {
-    font: 16px;
+    font-size: 16px; /* Corrected font property */
     color: #465b52;
     margin: 15px 0 20px 0;
 }
@@ -54,7 +54,6 @@ button.normal {
     border: none;
     outline: none;
     transition: 0.2s;
-
 }
 
 button.white {
@@ -81,8 +80,7 @@ body {
     justify-content: space-between;
     padding: 20px 80px;
     background: #E3E6F3;
-    box-shadow: 0 5px 15x rgba(0, 0, 0, 0.06);
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
     z-index: 999;
     position: sticky;
     top: 0;
@@ -124,10 +122,56 @@ body {
     bottom: -4px;
     left: 20px;
 }
-#mobile{
+
+#mobile {
     display: none;
     align-items: center;
+    
 }
+
+#mobile a{
+    color: #000;
+}
+#mobile i {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #header {
+        padding: 10px 20px;
+    }
+
+    #navbar {
+        position: fixed;
+        top: 0;
+        right: -250px; /* Initially off-screen */
+        width: 250px;
+        height: 100%;
+        background: #E3E6F3;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 60px; /* Adjusted for spacing below header */
+        transition: right 0.3s ease; /* Smooth transition */
+        z-index: 1000;
+    }
+
+    #navbar.active {
+        right: 0; /* Show navbar */
+    }
+
+    #navbar li {
+        padding: 15px 0;
+    }
+
+    #mobile {
+        display: flex;
+    }
+}
+
 /* Home Page */
 #hero {
     background-image: url(images/hero4.png);
@@ -522,7 +566,7 @@ footer .copyright{
     width: 100%;
     text-align: center;
 }
-@media (max-width:799px) {
+/* @media (max-width:799px) {
     #navbar {
         display: flex;
         flex-direction: column;
@@ -552,4 +596,4 @@ footer .copyright{
         font-size: 24px;
         padding-left:20px ;
     }
-}
+} */
