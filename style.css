@@ -238,14 +238,28 @@ body {
     }
 
     #banner3 .banner-box {
-        width: 28%;
+        width: 32%;
     }
-    /* #newsletter{
+
+    #newsletter {
+        display: flex;
         flex-wrap: wrap;
+        width: 100%;
     }
+
     #newsletter .form {
         width: 100%;
-    } */
+    }
+
+    #newsletter input {
+        width: 70%;
+    }
+
+        /* issue on button  */
+    #newsletter button {
+        display: none;
+    }
+
 
 }
 
